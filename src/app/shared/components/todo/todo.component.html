@@ -1,0 +1,123 @@
+<div class="container">
+
+  <div class="row py-5">
+    <div class="col-12 text-center">
+      <h2 class= "bg-primary text-white mb-5" >Add Fruits</h2>
+       <div class="row">
+   <div class="col-6 mb-4">
+        <label for="todoItem" class="mx-3"><strong>ToDo List Fruits</strong></label>
+        <input #inputRef type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Fruit">
+
+        <button class="btn btn-primary m-3" (click)="onAddFruits(inputRef)">Add</button>
+   </div>
+
+   <div class="col-6">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of listItemsFruits">{{item.FruitName}}</li>
+    </ul>
+    </div>
+       </div>
+    </div>
+ </div>
+
+
+   <div class="row py-5">
+      <div class="col-12 text-center">
+        <h2 class= "bg-info text-white mb-5" >Add Vegetables [LocalStorage]</h2>
+         <div class="row">
+     <div class="col-6 mb-4">
+          <label for="todoItem" class="mx-3"><strong>ToDo List</strong></label>
+          <input #inputRef type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Veggis">
+
+          <button class="btn btn-primary m-3" (click)="onAdd()">Add</button>
+     </div>
+     <p>{{listItemsvegi | json}}</p>
+     <div class="col-6">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of listItemsvegi ">{{item}}</li>
+      </ul>
+      </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="row py-5">
+    <div class="col-12 text-center">
+      <h2 class= "bg-info text-white mb-5" >Add Employee</h2>
+       <div class="row">
+   <div class="col-6 mb-4">
+        <label for="todoItem" class="mx-3"><strong>ToDo Table Employee</strong></label>
+        <input #inputRefName type="text" name="username" class="form-control" placeholder="Add Name" class="form-control">
+
+        <input #inputRefId type="text" name="userid" class="form-control" placeholder="Add Id" class="form-control m-3">
+
+        <input #inputRefRole type="text" name="Role" class="form-control" placeholder="Add Role" class="form-control">
+
+
+        <button class="btn btn-primary m-3" (click)="onAddEmp(inputRefName,inputRefRole,inputRefId)">Add Employee</button>
+   </div>
+
+   <div class="col-6">
+    <table class= "table table-success table-striped">
+      <thead >
+          <tr>
+                 <th>Sr.No</th>
+                 <th>Employee-Name</th>
+                 <th>Employee-Id</th>
+                 <th>Employee-Role</th>
+          </tr>
+      </thead>
+      <tbody>
+           <tr *ngFor="let user of employeData; let i = index">
+              <td>{{i + 1}}</td>
+              <td>{{user.EmpName}}</td>
+              <td>{{user.Id}}</td>
+              <td>{{user.Role}}</td>
+           </tr>
+      </tbody>
+   </table>
+    </div>
+       </div>
+    </div>
+ </div>
+
+
+
+ <div class="row py-5">
+  <div class="col-12 text-center">
+    <h2 class= "bg-secondary text-white mb-5" >Add Users[LocalStorage]</h2>
+     <div class="row">
+ <div class="col-6 mb-4">
+  <input type="text" placeholder="Name" #nameInput class="form-control">
+  <input type="number" placeholder="Age" #ageInput class="form-control m-3">
+  <input type="email" placeholder="Email" #emailInput class="form-control">
+  <button class="btn btn-success m-3" (click)="addUsers()">Add User</button>
+ </div>
+
+ <div class="col-6">
+  <table class ="table table-dark table-striped-columns">
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of UserData; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+     </div>
+  </div>
+</div>
+</div>
+
+

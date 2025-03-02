@@ -1,0 +1,114 @@
+<div class="container">
+   <div class="row">
+     <div class="col-12 text-center">
+            <h2 class="bg-primary text-white">Fruits And It's Benefits</h2>
+          <table class= "table table-success table-striped">
+             <thead >
+                 <tr>
+                        <th>Sr.No</th>
+                        <th>Name</th>
+                        <th>Benefits</th>
+                 </tr>
+             </thead>
+             <tbody>
+                  <tr *ngFor="let fruit of fruits; let i = index">
+                     <td>{{i + 1}}</td>
+                     <td>{{fruit.name}}</td>
+                     <td>{{fruit.benefits}}</td>
+                  </tr>
+             </tbody>
+          </table>
+     </div>
+   </div>
+
+
+   <div class="row">
+    <div class="col-12 text-center">
+           <h2 class="bg-success text-white">Vegetables And It's Benefits</h2>
+         <table class= "table table-success table-striped">
+            <thead >
+                <tr>
+                       <th>Sr.No</th>
+                       <th>Name</th>
+                       <th>Benefits</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let vegi of vegetables; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{vegi.name}}</td>
+                    <td>{{vegi.benefits}}</td>
+                 </tr>
+            </tbody>
+         </table>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 text-center">
+           <h2 class="bg-info text-white">DryFruits And It's Benefits</h2>
+         <table class= "table table-light table-striped">
+            <thead >
+                <tr>
+                       <th>Sr.No</th>
+                       <th>Name</th>
+                       <th>Benefits</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let dry of dryFruits; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{dry.name}}</td>
+                    <td>{{dry.benefits}}</td>
+                 </tr>
+            </tbody>
+         </table>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 text-center">
+           <h2 class="bg-warning text-white">HerbalTeas And It's Benefits</h2>
+         <table class= "table table-info table-striped">
+            <thead >
+                <tr>
+                       <th>Sr.No</th>
+                       <th>Name</th>
+                       <th>Benefits</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let herbal of herbalTeas; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{herbal.name}}</td>
+                    <td>{{herbal.benefits}}</td>
+                 </tr>
+            </tbody>
+         </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+           <h2 class="bg-danger text-white">Spices And It's Benefits</h2>
+         <table class= "table table-dark table-striped">
+            <thead >
+                <tr>
+                       <th>Sr.No</th>
+                       <th>Name</th>
+                       <th>Benefits</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let spice of spices; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{spice.name}}</td>
+                    <td>{{spice.benefits}}</td>
+                 </tr>
+            </tbody>
+         </table>
+    </div>
+  </div>
+</div>

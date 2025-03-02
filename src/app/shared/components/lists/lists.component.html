@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="bg-primary text-white">List Of Fruits</h2>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let fruit of fruits">
+                {{fruit.name}}
+                {{fruit.benefits}}
+              </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="col-12 text-center">
+            <h2 class="bg-secondary text-white">Vegetables</h2>
+            <ul class="list-group">
+                <li class="list-group-item"
+                  *ngFor="let vegi of vegetables">
+                    {{vegi.name}}
+                    {{vegi.benefits}}
+                </li>
+            </ul>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center">
+           <h2 class="bg-info text-warning">DryFruits</h2>
+           <ul class="list-group">
+               <li class="list-group-item"
+                 *ngFor="let dry of dryFruits">
+                   {{dry.name}}
+                   {{dry.benefits}}
+               </li>
+           </ul>
+      </div>
+   </div>
+
+   <div class="row">
+    <div class="col-12 text-center">
+         <h2 class="bg-success text-white">HerbalTeas</h2>
+         <ul class="list-group">
+             <li class="list-group-item"
+               *ngFor="let herbal of herbalTeas">
+                 {{herbal.name}}
+                 {{herbal.benefits}}
+             </li>
+         </ul>
+    </div>
+ </div>
+
+ <div class="row">
+  <div class="col-12 text-center">
+       <h2 class="bg-warning text-info">Spices</h2>
+       <ul class="list-group">
+           <li class="list-group-item"
+             *ngFor="let spice of spices">
+               {{spice.name}}
+               {{spice.benefits}}
+           </li>
+       </ul>
+  </div>
+</div>
+</div>
