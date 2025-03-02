@@ -6,9 +6,9 @@
        <div class="row">
    <div class="col-6 mb-4">
         <label for="todoItem" class="mx-3"><strong>ToDo List Fruits</strong></label>
-        <input #inputRef type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Fruit">
+        <input #inputRefFruit type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Fruit">
 
-        <button class="btn btn-primary m-3" (click)="onAddFruits(inputRef)">Add</button>
+        <button class="btn btn-primary m-3" (click)="onAddFruits(inputRefFruit)">Add</button>
    </div>
 
    <div class="col-6">
@@ -27,11 +27,10 @@
          <div class="row">
      <div class="col-6 mb-4">
           <label for="todoItem" class="mx-3"><strong>ToDo List</strong></label>
-          <input #inputRef type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Veggis">
+          <input #inputRefVeg type="text" name="todoItem" class="form-control" placeholder="Add Your Favourite Veggis">
 
-          <button class="btn btn-primary m-3" (click)="onAdd()">Add</button>
+          <button class="btn btn-primary m-3" (click)="onAdd()">Add Vegetable</button>
      </div>
-     <p>{{listItemsvegi | json}}</p>
      <div class="col-6">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let item of listItemsvegi ">{{item}}</li>

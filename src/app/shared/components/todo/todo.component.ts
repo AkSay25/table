@@ -17,8 +17,8 @@ export class TodoComponent implements OnInit{
    UserData:Array<Iuser> = [];
 
    //getting element from template
-    @ViewChild('inputRef') inputRefVeg!:ElementRef;
-    @ViewChild('inputRef') inputRefFruit!:ElementRef;
+    @ViewChild('inputRefVeg') inputRefVeg!:ElementRef;
+    @ViewChild('inputRefFruit') inputRefFruit!:ElementRef;
 
     //user Input Access
      @ViewChild('nameInput') nameInput!: ElementRef;
@@ -30,15 +30,16 @@ export class TodoComponent implements OnInit{
     this.listItem();
     this.loadTableData();
 
-  }
 
+  }
+   // Fruit list
   onAddFruits(fruit:HTMLInputElement){
       let newFruit:Ifruit = {
         FruitName : fruit.value};
       this.listItemsFruits.push(newFruit);
   }
 
-  //locatstorage list
+  //locatstorage list vegi
    listItem(){
     //recived value from key locatstorage
     let list = localStorage.getItem('listItems');
@@ -49,7 +50,7 @@ export class TodoComponent implements OnInit{
     //adding value to list
     let Value = this.inputRefVeg.nativeElement.value;
     console.log(Value);
-
+    // push to array
     this.listItemsvegi.push(Value);
     //setting value to localstorage
     localStorage.setItem('listItems',JSON.stringify(this.listItemsvegi));
@@ -79,7 +80,7 @@ export class TodoComponent implements OnInit{
     this.UserData = data ? JSON.parse(data) : [];
   }
 
-  // Add new row
+  // Add new user
   addUsers() {
     const name = this.nameInput.nativeElement.value;
     const age = this.ageInput.nativeElement.value;
